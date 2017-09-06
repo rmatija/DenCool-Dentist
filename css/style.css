@@ -39,6 +39,11 @@ ul{
 	padding: 15px;
 }
 
+.gen_den_title, .cos_den_title, .spec_den_title {
+	text-decoration: none;
+	color: black;
+}
+
 /*========Header========*/
 
 header{
