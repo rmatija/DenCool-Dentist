@@ -1,14 +1,24 @@
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("to_top").style.display = "block";
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {       
+        $('#to_top').fadeIn(200);    
     } else {
-        document.getElementById("to_top").style.display = "none";
+        $('#to_top').fadeOut(200);   
     }
-}
+});
+$('#to_top').click(function() {      
+    $('body,html').animate({
+        scrollTop : 0                       
+    }, 500);
+});
 
+$("#gen_den").click(function (){
+    $("#gen_den_para").toggle();
+});
 
-function topFunction() {
-    document.body.scrollTop = 0; 
-}
+$("#cos_den").click(function(){
+    $("#cos_den_para").toggle();
+});
+
+$("#spec_den").click(function(){
+    $("#spec_den_para").toggle();
+});
